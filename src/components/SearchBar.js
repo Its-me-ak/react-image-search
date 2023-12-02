@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SearchIcon from '../search_icon.png'
 
 function SearchBar({onSubmit}) {
     const [term, setTerm] = useState('');
@@ -17,7 +18,7 @@ function SearchBar({onSubmit}) {
         <>
             <form onSubmit={handleFormSubmit}>
                 <input type="text" placeholder="Search for image" className="input" value={term} onChange={handleChange}/>
-
+                <img src={SearchIcon} className="search-icon" onClick={handleFormSubmit} alt="" />
             </form>
         </>
     )
